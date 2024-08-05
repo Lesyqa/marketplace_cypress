@@ -2,7 +2,9 @@
 describe('add_product', () => {
     
     beforeEach(() => {
-        cy.login('i.partner@marketplace.ru', 'i.partner');
+        email = Cypress.env('email');
+        password = Cypress.env('password');
+        cy.login(email, password);
     })
 
 
